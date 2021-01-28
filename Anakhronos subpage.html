@@ -1,0 +1,1564 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1400px;, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<title>Anakhronos.com</title>
+<style>
+  /* SCROLL TO UP*/
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+/*END FOR SCROLL TO UP*/
+
+
+  #loading
+  {
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:#fff url('My Video.gif') no-repeat center;
+    z-index:9999;
+
+
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+
+}
+
+li {
+  float: left;
+  margin-left: 0px;
+  left:0;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+
+}
+
+li a:hover {
+  background-color: #111;
+  color:yellow;
+}
+
+body{
+ /* background: url('https://www.wallpaperup.com/uploads/wallpapers/2014/01/28/239442/e414f64f2b3148672b1e4769773709ce-375.jpg');*/
+
+}
+/*.fullbody{
+   height: 1000px;
+  background: linear-gradient(to bottom right, #33ccff 40%, #ff99cc 60%);
+
+  color: black;
+  text-align: center;
+  margin-top: -20px;
+}
+.fullbody h1{
+  font-size: 75px;
+  font-family: 'Lobster', cursive;
+  font-weight: bolder;
+}
+*/
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:0;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+/*
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+*/
+h1 {
+ font-size: 75px;
+
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+.column {
+  text-align: center;
+  width: 33.33%;
+  padding: 5px;
+  float: left;
+  color: white;
+  font-size: 25px;
+
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  color: white;
+
+
+}
+
+.column img{
+  width:200px;
+}
+
+.column  :hover{
+  border-radius: 50%;
+
+
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 20%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    border-radius: 20%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+    border-radius: 20%
+}
+
+.fa-instagram {
+  background: #d6249f;
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border-radius: 20%
+}
+
+.bottom{
+  background:;
+  height: 120px;
+  color: white;
+  padding-top: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* CSS FOR PAGE HEADING */
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4em;
+  color:white;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.partners{
+  text-align: left;
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-left: 80px;
+  color: white;
+
+}
+
+/*NEW HOVER REGISTER BUTTON*/
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.bod2 {
+  background:black;
+  width:100%;
+ position:relative;
+ left:500px
+}
+.origin
+{
+  text-align: center;
+}
+/*ENDING FOR REGISTER BUTTON*/
+
+
+
+
+
+
+body{
+  background: url('https://i.pinimg.com/originals/fe/e1/84/fee18481df61ce4220956dc8f44d09e8.jpg');
+  background-size:cover ;
+}
+
+.box{
+        position: relative;
+       /* Make the width of box same as image */
+
+    }
+    .box img{
+      width:100%;
+
+      height: 250px;
+      object-fit: cover;
+
+    }
+    .box .text1{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 2%; /* Adjust this value to move the positioned div up and down */
+
+        width: 60%; /* Set the width of the positioned div */
+    }
+
+
+@media screen and (min-width: 601px) {
+  .text-block {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.text-block {
+    font-size: 10px;
+  }
+
+    body {
+       margin: 0;
+       padding: 0;
+     /* background: url('https://img.freepik.com/free-vector/red-green-neon-light-stage_1017-22036.jpg?size=626&ext=jpg&ga=GA1.2.581546290.1600759452');*/
+
+}
+    }
+
+    #slider {
+       display: block;
+       height: 350px;
+       width: 100%;
+       margin: auto;
+       overflow: hidden;
+       margin-top: 60px;
+       position: relative;
+       /*background: url('https://img.freepik.com/free-vector/red-green-neon-light-stage_1017-22036.jpg?size=626&ext=jpg&ga=GA1.2.581546290.1600759452');*/
+       background-size: contain;
+       margin-top: 40px;
+    }
+
+    #slider #slides {
+       width: 100%;
+       height: 100%;
+       overflow: hidden;
+       font-family: Arial, sans-serif;
+       position: relative;
+    }
+
+    #slider #slides > div {
+       list-style: none;
+       height: 100%;
+       width: 500%;
+       position: relative;
+       left: 0px;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       /* Set 3D perspective since we're using 3D transforms */
+       transform-style: preserve-3d;
+       -webkit-transform-style: preserve-3d;
+       -webkit-perspective: 600px;
+       -moz-perspective: 600px;
+       perspective: 600px;
+       -webkit-perspective-origin: 10% 50%;
+       -moz-perspective-origin: 10% 50%;
+       perspective-origin: 10% 50%;
+    }
+
+    #slides > div > span {
+       /* Run the tranistions */
+       -webkit-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       -moz-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       -o-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       height: 320px;
+       width: 10%;
+       float: left;
+       border-radius: 5px;
+       opacity: 1;
+       overflow: hidden;
+       display: block;
+       position: relative;
+       font-size: 1.6em;
+       top: 20px;
+       z-index: 1;
+    }
+
+    /* Display none, so the user doesn't see whats happening with the radio buttons */
+    #slider input[type=radio] {
+       display: none;
+    }
+
+    #slider #slides > div > span > img {
+       margin: auto;
+       height: 100%;
+    }
+
+    /* Style the arrows so they look nice! */
+    #slider .arrows {
+       font-size: 15px;
+       color: #fff;
+       position: absolute;
+       top: 290px;
+       display: none;
+       cursor: pointer;
+       font-family: "SSStandard";
+       z-index: 9999;
+       width: 29px;
+       height: 35px;
+       border-radius: 32px;
+       text-align: center;
+       padding: 7px 0 0 3px;
+       background: black;
+       box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px 11px 24px -8px rgba(255,255,255,0.4);
+    }
+
+    #slider .arrows:hover {
+       box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px -11px 24px -8px rgba(255,255,255,0.4);
+    }
+
+
+
+
+
+    /* This is for positioning the arrows */
+    #button-1:checked ~ #arrow-2, #button-2:checked ~ #arrow-3, #button-3:checked ~ #arrow-4, #button-4:checked ~ #arrow-5 {
+       right: 27%;
+       display: block;
+    }
+
+    /* Since there is no previous sibling selector in CSS, we have to select the correct arrow, reposition it and rotate it 180deg so it appears as though it's a back arrow */
+    #button-2:checked ~ #arrow-1, #button-3:checked ~ #arrow-2, #button-4:checked ~ #arrow-3, #button-5:checked ~ #arrow-4 {
+       left: 27%;
+       display: block;
+       -webkit-transform: rotateZ(180deg);
+       -o-transform: rotateZ(180deg);
+       transform: rotateZ(180deg);
+       box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px -11px 24px -8px rgba(255,255,255,0.4);
+    }
+
+    #button-2:checked ~ #arrow-1:hover, #button-3:checked ~ #arrow-2:hover, #button-4:checked ~ #arrow-3:hover, #button-5:checked ~ #arrow-4:hover {
+       box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px 11px 24px -8px rgba(255,255,255,0.4);
+    }
+
+    /* The images used in the slides, feel free to change this */
+    #image-1 {
+       background: url('CROWD5.jpg');
+       background-size:100% 100%;
+    }
+
+    #image-2 {
+       background: url('SLIDERA9.jpg');
+       background-size: 100% 100%;
+    }
+
+    #image-3 {
+       background: url('BWCROWD.jpg');
+       background-size: 100% 100%;
+    }
+
+    #image-4 {
+       background: url('SLIDERA 4.jpg');
+       background-size: 100% 100%;
+    }
+
+    #image-5 {
+       background: url('RIDDLES.jpg');
+       background-size: 100% 100%;
+    }
+
+
+
+    /* The next bit is a bit wordy, but it just positions the slides at either side of the selected slide
+      so we get a cool 3D effect */
+    #slider #button-1:checked ~ #slides > div #image-2, #slider #button-1:checked ~ #slides > div #image-3,
+    #slider #button-1:checked ~ #slides > div #image-4, #slider #button-1:checked ~ #slides > div #image-5,
+    #slider #button-2:checked ~ #slides > div #image-3, #slider #button-2:checked ~ #slides > div #image-4,
+    #slider #button-2:checked ~ #slides > div #image-5, #slider #button-3:checked ~ #slides > div #image-4,
+    #slider #button-3:checked ~ #slides > div #image-5, #slider #button-4:checked ~ #slides > div #image-5 {
+       -webkit-transform: rotateY(-10deg) scale(0.8) translateX(-10%);
+       transform: rotateY(-10deg) scale(0.8) translateX(-10%);
+       z-index: 0;
+    }
+
+    #slider #button-2:checked ~ #slides > div #image-1, #slider #button-3:checked ~ #slides > div #image-2,
+    #slider #button-3:checked ~ #slides > div #image-1, #slider #button-4:checked ~ #slides > div #image-3,
+    #slider #button-4:checked ~ #slides > div #image-2, #slider #button-4:checked ~ #slides > div #image-1,
+    #slider #button-5:checked ~ #slides > div #image-4, #slider #button-5:checked ~ #slides > div #image-3,
+    #slider #button-5:checked ~ #slides > div #image-2, #slider #button-5:checked ~ #slides > div #image-1 {
+       -webkit-transform: rotateY(10deg) scale(0.8) translateX(10%);
+       transform: rotateY(10deg) scale(0.8) translateX(10%);
+       z-index: 0;
+    }
+
+    /* Show the info box when the user selects the slides */
+    #slider #button-1:checked ~ #slides > div #image-1 .info,
+    #slider #button-2:checked ~ #slides > div #image-2 .info,
+    #slider #button-3:checked ~ #slides > div #image-3 .info,
+    #slider #button-4:checked ~ #slides > div #image-4 .info,
+    #slider #button-5:checked ~ #slides > div #image-5 .info,
+    #slider #button-5:checked ~ #slides > div #image-6 .info{
+       bottom:0px;
+    }
+
+    /* .. and finally, move the slides into the correct position when the user clicks the arrow, so the right
+      slide is selected */
+
+    #slider #button-1:checked ~ #slides > div > span { left: 5% }
+
+    #slider #button-2:checked ~ #slides > div > span { left: -5% }
+
+    #slider #button-3:checked ~ #slides > div > span { left: -15% }
+
+    #slider #button-4:checked ~ #slides > div > span { left: -25% }
+
+    #slider #button-5:checked ~ #slides > div > span { left: -35% }
+
+    #slider #button-6:checked ~ #slides > div > span { left: -45% }
+
+    /*CARASOUL*/
+
+/*CHECK THIS PART ABIR*/
+    @media screen (min width:320px) and (max width:770px){
+.container img{
+  height: 500px;
+  opacity:0.6px;
+}
+
+  }
+
+.container img{
+  height:600px;
+  opacity:0.4px;
+}
+
+
+/*CSS FOR FLIP CARDS*/
+
+.column1 {
+  float: left;
+  width: 25%;
+  /*padding: 0 10px;*/
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row1 {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card1{
+  background-color: transparent;
+
+ width: 300px;
+ height: 300px;
+ perspective: 1000px;
+}
+.card3{
+  background-color: transparent;
+
+ width: 300px;
+ height: 300px;
+ perspective: 1000px;
+}
+.card4{
+  background-color: transparent;
+
+ width: 300px;
+ height: 300px;
+ perspective: 1000px;
+}
+
+.card2{
+  background-color: transparent;
+
+ width: 300px;
+ height: 300px;
+ perspective: 1000px;
+}
+.flip-card-inner {
+    border-radius: 10%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card1:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.card3:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card2:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card4:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+    border-radius: 10%;
+}
+
+.flip-card-back {
+    border-radius: 10%;
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #960018;;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.container {
+  padding-bottom: 14px;
+  position: center;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 120px;
+  left:120px;
+  font-size: 20px;
+   background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+      font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+  color:white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+.text-block1 {
+  position:absolute;
+  top:20px;
+  right: 430px;
+   background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  font-size: 16px;
+  color:white;
+  padding-left: 300px;
+  padding-right: 300px;
+
+}
+/*REGISTER BUTTON*/
+.button {
+  padding: 2px 5px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #FF0000;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
+
+
+/*ANIMATION FOR BACKGROUND*/
+
+.bg {
+  animation:slide 6s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg,  #0071c5 50%, #56DDD2 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:6s;
+}
+
+.bg3 {
+  animation-duration:7s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.content{
+  color:white;
+  font-size: 28px;
+  margin-left: 20px;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+    text-align: justify;
+    margin-right: 20px;
+}
+.black
+{
+  background-color:black;
+  width:100%;
+}
+.imgfit
+{
+  width:100%;
+  height: 5700px;
+}
+.heading
+{
+  font-size: 40px;
+font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+  text-align: center;
+  color:cyan;
+  font-weight:bold;
+}
+
+
+/*CODES FOR NEON*/
+
+
+.neon {
+  text-align:center;
+font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+  color: #FB4264;
+  font-size: 50px;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #F40A35;
+
+
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
+}
+.design
+{
+  float:right;
+  margin-top: -50px;
+  font-family: 'Oswald', sans-serif;
+  margin-right:10px;
+  color:white;
+}
+
+.copyright
+{
+  float:left;
+  margin-top: -30px;
+    color:#044284;
+    margin-left:10px;
+}
+.bottom{
+  color:#044284;
+}
+
+
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #0047ab, 0 0 3vw #0047ab, 0 0 10vw #0047ab, 0 0 10vw #0047ab, 0 0 .4vw #0047ab, .5vw .5vw .1vw #0047ab;
+    color: #ABCBFE ;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #0047ab, 0 0 1.5vw #0047ab, 0 0 5vw#0047ab, 0 0 5vw#0047ab, 0 0 .2vw #0047ab, .5vw .5vw .1vw #0047ab;
+    color: #fff;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #0047ab, 0 0 3vw #0047ab, 0 0 10vw #0047ab, 0 0 10vw#0047ab, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+/*NEON CODES ENDING HERE DESIGNING*/
+
+</style>
+</head>
+<body onload="myLoader()">
+  <a id="button"></a>
+
+  <div id="loading"></div>
+  <!--<ul>
+    <li><a class="active" href="test1.html">Home</a></li>
+    <li><a href="">S.Map</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>  --->
+<!--<div class="fullbody">
+  <h1>OUR SPONSORS</h1>
+</div>   -->
+<!--
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div> --->
+<!--<div class="content">
+  <h1>Sliding Diagonals Background Effect</h1>
+</div>  -->
+
+
+
+
+              <!--HTML FOR NAVBAR-->
+              <div class="navbar">
+                  <a href="ABT US.html">ABOUT US</a>
+              <!--  <a href="ANAKHRONOS MAIN PAGE.html">HOME</a> --->
+                  <a href="MANAGEMENT.html">MANAGEMENT DESK</a>
+                <div class="dropdown">
+                  <button class="dropbtn">EVENTS
+
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="FRESHERS.html">FRESHERS'</a>
+                    <a href="ANAKHRONOS MAIN PAGE.html">ANAKHRONOS</a>
+                          <a href="UPCOMING EVENTS.html">UPCOMING EVENTS</a>
+
+                  </div>
+                </div>
+              <!--  <div class="dropdown">
+                  <button class="dropbtn">ARTISTS
+
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">SINGERS</a>
+                    <a href="#">BANDS</a>
+
+                  </div>
+                </div> -->
+                  <a href="PAST LINE UP.html">ARTISTS</a>
+                  <!--<a href="e-brochure.pdf">BROCHURE</a>-->
+                  <div class="dropdown">
+                    <button class="dropbtn">BROCHURE
+
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="e-brochure.pdf">2K20</a>
+                      <a href="ANAKHRONOS'19_BROCHURE.pdf">2K19</a>
+                      <a href="Brochure2018.pdf">2K18</a>
+                      <a href="ANAKHRONOS broc.pdf">2K17</a>
+
+                    </div>
+                  </div>
+                    <a href="sponsors.html">SPONSORS</a>
+                      <a href="MERCHANDISE.html">MERCHANDISE</a>
+                        <a href="GALLERY.html">GALLERY</a>
+                          <a href="ENROLLMENT.html">ENROLLMENT</a>
+                              <a href="ALUMNI.html">ALUMNI</a>
+                          <a href="CONTACT US 1.html">CONTACT US</a>
+
+
+              </div>
+
+
+
+<div class="black">
+<video width="100%" height="440" autoplay loop muted>
+  <source src="FULL LOGO.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+</div>
+<!--HTML FOR BACKGROUND ANIAMTION-->
+
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+
+
+
+
+
+
+<!--
+
+ <div class="box">
+      <img src="https://i1.wp.com/musicshanecollins.com/blog/wp-content/uploads/2015/08/tumblr_mmrgv1BmVE1r4q586o1_r1_500.gif" alt="Flying Kites">
+      <div class="text1">
+        <h1 class="ml5">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters letters-left">FRESHERS</span>
+
+            <span class="line line2"></span>
+          </span>
+        </h1>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</div>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!--<div class="container">-->
+  <!--<img src="https://assets1.ello.co/uploads/asset/attachment/4158254/ello-optimized-002c9e22.gif" alt="Norway" style="width:100%;"> -->
+<!--  <div class="text-block1">
+  </div>
+  <div class="text-block">
+    <h4>About Anakhronos</h4>
+    <p>Established in the year 2001, Techno Main Salt Lake stands tall as the best and most acclaimed academic institute in Asia. A college with a difference, this institute is presently running variety of UG programs and a variety of PG courses as well. Situated in Salt Lake, Kolkata- the IT Hub of West Techno India is a premier abode for aspirants across the nation; top rank holders in prestigious competitive examinations such as WBJEE and JEE(Mains) have trusted this institute over the years.Established in the year 2001, Techno Main Salt Lake stands tall as the best and most acclaimed academic institute in Asia. A college with a difference, this institute is presently running variety of UG programs and a variety of PG courses as well. Situated in Salt Lake, Kolkata- the IT Hub of West Techno India is a premier abode for aspirants across the nation; top rank holders in prestigious competitive examinations such as WBJEE and JEE(Mains) have trusted this institute over the yearsEstablished in the year 2001, Techno Main Salt Lake stands tall as the best and most acclaimed academic institute in Asia. A college with a difference, this institute is presently running variety of UG programs and a variety of PG courses as well. Situated in Salt Lake, Kolkata- the IT Hub of West </p>
+  </div>
+</div>-->
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<!--<div class="content">
+  <h1>About Anakhronos</h1>
+  <p>
+Anakhronos - the Annual Cultural Fest of Techno Main Salt Lake is one of the largest cultural fests of Kolkata. Anakhronos is derived from the Greek word “Anachronismos” which translates to “Moments Surpassing Time”. It was started back in the year 2001 and with every passing year it has become the best platform for students all across the state to unravel their talents. So brace yourself to enjoy an amazing line up of events, back to back power packed performances, star nights and 3 days of absolute fun which you will cherish forever. .
+</p>
+
+
+</div>
+-->
+<br>
+<br>
+  <div class="neon">MOMENTS SURPASSING TIME</div>
+<br>
+<br>
+<div id="slider">
+    <input type="radio" id="button-1" name="controls" />
+    <input type="radio" id="button-2" name="controls" checked />
+    <input type="radio" id="button-3" name="controls" />
+    <input type="radio" id="button-4" name="controls" />
+    <input type="radio" id="button-5" name="controls" />
+     <input type="radio" id="button-6" name="controls" />
+
+    <label for="button-1" class="arrows" id="arrow-1">></label>
+    <label for="button-2" class="arrows" id="arrow-2">></label>
+    <label for="button-3" class="arrows" id="arrow-3">></label>
+    <label for="button-4" class="arrows" id="arrow-4">></label>
+    <label for="button-5" class="arrows" id="arrow-5">></label>
+    <label for="button-5" class="arrows" id="arrow-6">></label>
+    <div id="slides">
+        <div>
+            <span id="image-1">
+                <span class="info">
+
+                </span>
+            </span>
+            <span id="image-2">
+                <span class="info">
+
+                    </span>
+            </span>
+            <span id="image-3">
+                <span class="info">
+
+
+                </span>
+            </span>
+            <span id="image-4">
+                <span class="info">
+
+
+                </span>
+            </span>
+            <span id="image-5">
+                <span class="info">
+
+
+                </span>
+            </span>
+            <span id="image-6">
+                <span class="info">
+
+
+                </span>
+            </span>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="neon">
+EVENTS</div>
+
+
+
+<br>
+<br>
+<div class="container">
+<!--  <img src="SURTARANG.jpg" alt="Norway" style="width:100%;">--->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="SURTARANGVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="text-block">
+    <h4 class="heading">Sur Tarang</h4>
+    <p>
+      Do you think music is the language of your soul? Does your heart always beat with the rhythm of the song? Then Team Ankuran brings to you “Sur Tarang” -A solo singing competition and one of the most loved on stage events. Don’t miss this opportunity to make people fall in love with your voice.
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+<div>
+  </div>
+<div class="container">
+<!--  <img src="STEPUP2.jpg" alt="Norway" class="imgfit">--->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="STEPUPVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <div class="text-block1">
+  </div>
+  <div class="text-block">
+    <h4 class="heading">STEP UP</h4>
+    <p>
+      "There are shortcuts to happiness and dancing is one of them."
+Dance is an art of time and space. Anakhronos brings to you one of the most enthralling events "Step Up", which is a SOLO DANCE COMPETITION. It encourages all those budding artists who are willing to spread out their wings and vibe to that music. We welcome you to feel that spark inside you and fly with us!
+
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button>-->
+</a>
+  </div>
+</div>
+
+
+<div class="container">
+<!--  <img src="SLIDERA 5.jpg" alt="Norway" style="width:100%;">--->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="2MINSVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="text-block">
+    <h4 class="heading">2 Mins To Fame</h4>
+    <p>
+      "Your talent is God's gift to you. What you do with it is your gift back to God."
+  P.T Barnum once said that No one ever made a difference by being like everyone else. Anakhronos brings to you one of the most exciting events,"2 mins to fame" which is showcase your talent within 2 mins. Be it Beat-Boxing or playing unconventional instruments-the stage is all yours! So Don’t forget to steal the spotlight and show the world what makes you different from the others!
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+
+
+
+<div class="container">
+<!--  <img src="CLUBFEET1.jpg" alt="Norway" class="imgfit">  -->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="CLUBFEETVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="text-block1">
+  </div>
+  <div class="text-block">
+    <h4 class="heading">CLUB FEET</h4>
+    <p>
+      "Dancing is the closest thing to magic!"
+  Anakhronos presents,'ClubFeet:THE GROUP DANCE COMPETITION which never fails to trigger the adrenaline rush in all . If you believe that your team has many feet but only one mind, then, we have one stage all set for you. Bring your dancing shoes, turn the music on, make the audience jive and feel every bit of emotion as you tap your feet away and have the time of your life!
+
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> --->
+</a>
+  </div>
+</div>
+<div class="container">
+<!--  <img src="BANDBOX1.jpg" alt="Norway" style="width:100%;">--->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="BANDBOXVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="text-block">
+    <h4 class="heading">BAND BOX</h4>
+    <p>
+      Do you believe that something sets you apart from your squad? Do you have the passion   to swim into the galore of music and express your emotions through the beats of that drum or maybe through strings of the guitar ? Then you have come to the right place!!!Anakhronos presents 'Band Box:THE BATTLE OF BANDS'. Come and participate, Let music be your battlefield and make us believe that, "It's always more than.... just the music."
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+  <div class="container">
+  <!--<img src="PANACHE1.jpg" alt="Norway" class="imgfit">-->
+  <video width="100%" height="auto" autoplay loop muted>
+    <source src="PANACHEVIDEO.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="text-block">
+    <h4 class="heading">PANACHE(Fashion Show)</h4>
+    <p>
+    Panache, can be considered to be one of the most captivating FASHION SHOWS in town! Anakhronos provides the perfect runway to all those dedicated fashionistas to relive their passion. If you are sure of spreading a social message through your attire and attitude, then hop in, bring in your team and bewitch us in this ride under spotlight and charm.
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+<div class="container">
+  <!--<img src="https://content3.jdmagicbox.com/def_content/photographers/default-photographers-5.jpg?clr=493e1d" alt="Norway" style="width:100%;">-->
+  <video width="100%" height="auto" autoplay loop muted>
+    <source src="IMPRESSIONVIDEO.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="text-block">
+    <h4 class="heading">Impression(Photography Competition)</h4>
+    <p>
+      We don’t always get to create everything we imagine or bring the magic out on paper, but
+this glorious event will make you do just that. We look for those who inspire us with art and
+make everyone “go gaga” over their abilities.
+Tap into your creative side and let everyone become a fan of everything that you think and everything that you make.
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+
+<div class="container">
+<!--  <img src="SF2.jpg" alt="Norway" style="width:100%;">-->
+<video width="100%" height="auto" autoplay loop muted>
+  <source src="FILMVIDEO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="text-block">
+    <h4 class="heading">Short Film Making Competiton</h4>
+    <p>
+      This event is all about basking in the light of uncertainty and flourishing in it. Here we find
+the beauty of incompleteness and how stories matter more than anything else.
+If you are someone who thrives in making the dull moments come to life and see the world
+in a different light through your lenses, this event is here for you.
+
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <!--<img src="ANAKHRONOSART.jpg" alt="Norway" style="width:100%;">--->
+
+  <video width="100%" height="auto" autoplay loop muted>
+    <source src="ANAARTVIDEO.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="text-block">
+    <h4 class="heading">ART AND CRAFT</h4>
+    <p>
+      We don’t always get to create everything we imagine or bring the magic out on paper, but
+  this glorious event will make you do just that. We look for those who inspire us with art and
+  make everyone “go gaga” over their abilities.
+  Tap into your creative side and let everyone become a fan of everything that you think and everything that you make.
+
+
+
+    </p>
+    <a href="www.google.com">
+      <!--
+<button class="button">REGISTER</button> -->
+</a>
+  </div>
+</div>
+
+
+<br>
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<!--HTML FOR FLIP CARDS-->
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<!--HTML FOR FLIP CARDS-->
+<!--<div class="origin">
+ <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqddxBzSrFV2ScUzv8aLfdRaGaTYW6xfn1UUBwtc3wgtskiA/viewform?usp=sf_link">
+<button class="btn draw-border">ENROLL</button>
+</a>
+</div> --->
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+
+
+
+
+
+
+<div class="bottom">
+<b>FOLLOW US ON</b><br>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+   </br>
+   <div class="design">
+      DESIGNED BY <br> ABIR | SOURAJIT | TUNIR | ABHIROOP
+
+   </div>
+   <div class="copyright">
+    ANAKHRONOS Copyright&copy 2020
+  </div>
+   </div>
+
+<!--JAVASCRIPT FOR PAGE HEADING --->
+<script>
+   var btn = $("#button");
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass("show");
+  } else {
+    btn.removeClass("show");
+  }
+});
+
+btn.on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "300");
+});
+</script>
+<script type="text/javascript">
+
+  var preloader=document.getElementById('loading');
+  function myLoader()
+  {
+    preloader.style.display='none';
+  }
+
+
+
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+
+
+</body>
+</html>
