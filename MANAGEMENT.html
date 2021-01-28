@@ -1,0 +1,928 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1400px, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<!--LINK FPR MERCHANDISE IMAGE SLIDER-->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+<!--LINK FOR NAVBAR --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Anakhronos.com</title>
+</head>
+<style>
+
+
+
+
+
+
+
+
+
+/* CSS FOR PAGE HEADING */
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color:white;
+  text-align: center;
+
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.container {
+position: relative;
+padding-top: 120px;
+color: white;
+}
+.text{
+  color:white;
+  font-size: 19px;
+}
+
+
+/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+.slick-slide img {
+    width: 100%;
+}
+.slick-slide:hover img {
+  transform: scale(1.1);
+}
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+    height: 300px;
+    width:350px;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 20%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    border-radius: 20%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+    border-radius: 20%
+}
+
+.fa-instagram {
+  background: #d6249f;
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border-radius: 20%
+}
+
+.bottom{
+  background:;
+  height: 200px;
+  color: white;
+  padding-top: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.bg {
+  animation:slide 6s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg,  #0071c5 50%, #56DDD2 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:6s;
+}
+
+.bg3 {
+  animation-duration:7s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+
+
+
+
+
+/*CSS FOR NAVBAR*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #960018;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+/*CSS FOR UPCOMING EVENTS HEADING ANIAMTION*/
+.ml2 {
+  font-weight: 900;
+  font-size: 30px;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.ml3 {
+  font-weight: 900;
+  font-size: 30px;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+.ml3 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.ml4 {
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: -20px;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+.ml4 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+.followus{
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+
+
+
+.newtext{
+  color:white;
+}
+
+
+
+.container__image1 {
+  width: 200px;
+  margin: 20px 30px 30px 0;
+  float: left;
+  margin-left: 30px;
+  height: 200px;
+  border-radius: 50%;
+
+}
+.container__text1 {
+  display: inline;
+  color:  black;
+  font-size: 26px;
+  text-align: justify;
+  padding-top: 50px;
+  margin-right: 10px;
+   font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+
+}
+
+
+.container__image2 {
+  width: 200px;
+  margin: 20px 30px 30px 0;
+  float: right;
+  margin-left: 30px;
+  height: 200px;
+  border-radius: 50%;
+
+
+}
+.container__text2 {
+  display: inline;
+    color:  black;
+  font-size: 26px;
+ text-align: ;
+margin-right: -20px;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+
+
+
+}
+.container_text2 h2{
+  text-align:center;
+}
+
+
+
+
+
+.container__image3 {
+  width: 200px;
+  margin: 20px 30px 30px 0;
+  float: left;
+  margin-left: 30px;
+  height: 200px;
+  border-radius: 50%;
+}
+.container__text3 {
+  display: inline;
+    color:  black;
+  font-size: 26px;
+  padding-left: 20px;
+  margin-left: 10px;
+  text-align: justify;
+  margin-bottom: -50px;
+    margin-right: 10px;
+    font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+
+}
+
+
+
+.container__image4 {
+  width: 250px;
+  margin: 30px 30px 30px 0;
+  float: right;
+  margin-left: 30px;
+
+  margin-top: 40px;
+}
+.container__text4 {
+  display: inline;
+  color: white;
+  font-size: 20px;
+  padding-left: 50px;
+  margin-left: 50px;
+}
+.container_text4 h2{
+  text-align: left;
+}
+
+
+
+.container100{
+  border:solid 4px;
+  height: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-color: white;
+  padding-right: 20px;
+
+   background: #648880;
+ background: linear-gradient(to right, #f6f1d3, #F8C817 85%, #F8C817);
+
+
+
+}
+.container101{
+  border:solid 4px;
+  height: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20px;
+  padding-top: 5px;
+    border-color: white;
+    padding-left: 20px;
+
+    background: #648880;
+  background: linear-gradient(to right, #f6f1d3, #F8C817 85%, #F8C817);
+
+}
+
+.container102{
+  border:solid 4px;
+  height: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
+    border-color: white;
+    padding-right: 20px;
+
+    background: #648880;
+background: linear-gradient(to right, #f6f1d3, #F8C817 85%, #F8C817);
+
+}
+
+
+#preload{
+   position: fixed;
+  width:100%;
+  height:100vh;
+  background: #fff url('My Video.gif') no-repeat center;
+ z-index: 99999999;
+
+
+}
+/*
+.container110{
+  text-align: justify;
+  font-family: 'Lobster', cursive;
+  font-size: 23px;
+  border: solid 4px;
+  border-color: white;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.container110 img{
+  margin-left: 40%;
+
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+}
+*/
+.design
+{
+  float:right;
+  margin-top: -50px;
+  color:white;
+  padding-right: 10px;
+}
+
+.copyright
+{
+  color:#044284;;
+  float:left;
+  margin-top: -30px;
+  padding-left: 10px;
+}
+.followus{
+  color:#044284;
+}
+
+
+</style>
+
+<body onload="myFunction()">
+  <div id="preload">
+
+  </div>
+
+
+
+
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+
+
+                    <!--HTML FOR NAVBAR-->
+                    <div class="navbar">
+                        <a href="ABT US.html">ABOUT US</a>
+                    <!--  <a href="ANAKHRONOS MAIN PAGE.html">HOME</a> --->
+                        <a href="MANAGEMENT.html">MANAGEMENT DESK</a>
+                      <div class="dropdown">
+                        <button class="dropbtn">EVENTS
+
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="FRESHERS.html">FRESHERS'</a>
+                          <a href="ANAKHRONOS MAIN PAGE.html">ANAKHRONOS</a>
+                                <a href="UPCOMING EVENTS.html">UPCOMING EVENTS</a>
+
+                        </div>
+                      </div>
+                    <!--  <div class="dropdown">
+                        <button class="dropbtn">ARTISTS
+
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">SINGERS</a>
+                          <a href="#">BANDS</a>
+
+                        </div>
+                      </div> -->
+                        <a href="PAST LINE UP.html">ARTISTS</a>
+                        <!--<a href="e-brochure.pdf">BROCHURE</a>-->
+                        <div class="dropdown">
+                          <button class="dropbtn">BROCHURE
+
+                          </button>
+                          <div class="dropdown-content">
+                            <a href="e-brochure.pdf">2K20</a>
+                            <a href="ANAKHRONOS'19_BROCHURE.pdf">2K19</a>
+                            <a href="Brochure2018.pdf">2K18</a>
+                            <a href="ANAKHRONOS broc.pdf">2K17</a>
+
+
+                          </div>
+                        </div>
+                          <a href="sponsors.html">SPONSORS</a>
+                            <a href="MERCHANDISE.html">MERCHANDISE</a>
+                              <a href="GALLERY.html">GALLERY</a>
+                                <a href="ENROLLMENT.html">ENROLLMENT</a>
+                                    <a href="ALUMNI.html">ALUMNI</a>
+                                <a href="CONTACT US 1.html">CONTACT US</a>
+
+
+                    </div>
+
+
+
+
+
+  <h1 class="ml5">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters letters-left">MANAGEMENT DESK</span>
+
+      <span class="line line2"></span>
+    </span>
+  </h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+  <!--
+  <div class="container1">
+    <div>
+      <span>FRESHERS 2021</span>
+      <img src="https://i.gifer.com/1pWD.gif" alt="">
+    </div>
+    <div>
+      <span>ANAKHRONOS 2021</span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT3IEwfi2QSH6bBz0GkIwvasnNvebeqP9oCQ&usqp=CAU" alt="">
+    </div>
+    <div>
+      <span>MERCHANDISE</span>
+      <img src="https://cdn.thecollegefever.com/upload/27003254-1551808651612.jpg" alt="">
+    </div>
+    <div>
+      <span>ORIENTATION</span>
+      <img src="https://images.pexels.com/photos/705425/pexels-photo-705425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    </div>
+  </div>
+
+  </div> -->
+
+  <br>
+  <br>
+  <br>
+  <div class="container100">
+  <img class="container__image1" src="https://www.w3schools.com/howto/img_avatar.png"/>
+  <div class="container__text1">
+
+    <h1 class="ml2">Co-Chairman's Desk</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <p>Want to be a part of Team Ankuran? Join us in our Induction Session, to be held on December
+  2020. Explore yourself like never before! Welcome onboard.</p>
+  </div>
+  </div>
+  <br>
+  <br>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container101">
+  <img class="container__image2" src="https://www.w3schools.com/howto/img_avatar.png"/>
+  <div class="container__text2">
+    <h1 class="ml3">Director's (Global Operations) Desk</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <p>Whenever opportunities come your way, you should capitalize. What better way to be the latest
+  talk of college by showcasing your talents in our Freshers' Auditions! See you soon in the
+  Situation Room!</p>
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container102">
+  <img class="container__image3" src="https://www.w3schools.com/howto/img_avatar.png"/>
+  <div class="container__text3">
+    <h1 class="ml4">Director's (TMSL) Desk</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <p>
+    Ah! The one which you're eagerly waiting for. Be the face of your college by owning the stage
+  on the D-day! Do you have it in you to go all the way through? Well, let's find out! Dates releasing
+  soon. Stay tuned!
+  </p>
+
+  </div>
+</div>
+  <br>
+  <br>
+<!--
+  <div class= "container110">
+<img src="https://www.w3schools.com/howto/img_avatar.png">
+<h1>PRINCIPAL'S DESK</h1>
+<p>
+  Ah! The one which you're eagerly waiting for. Be the face of your college by owning the stage
+on the D-day! Do you have it in you to go all the way through? Well, let's find out! Dates releasing
+soon. Stay tuned!
+</p>
+
+
+  </div>
+  <br>
+  <br>
+  <br> --->
+
+  <!--
+  <img class="container__image4" src="FRESHERS1.jpg"/>
+  <div class="container__text4">
+  <h2>INDUCTION 2020</h2>
+  <p>
+    Some text.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Some text.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+   --->
+   <div class="followus">
+   <b>FOLLOW US ON</b><br>
+   <a href="#" class="fa fa-facebook"></a>
+   <a href="#" class="fa fa-twitter"></a>
+   <a href="#" class="fa fa-youtube"></a>
+   <a href="#" class="fa fa-instagram"></a>
+ </br>
+      <div class="design">
+      DESIGNED BY <br> ABIR | SOURAJIT | TUNIR | ABHIROOP
+
+   </div>
+   <div class="copyright">
+    ANAKHRONOS Copyright&copy 2020
+  </div>
+   </div>
+
+   </div>
+
+
+
+
+
+
+
+<script>
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+</script>
+
+
+
+
+<script>
+//JAVASCRIPT FOR ANIMATION OF UPCOMING EVENTS
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+  var textWrapper = document.querySelector('.ml3');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml3 .letter',
+      scale: [4,1],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 950,
+      delay: (el, i) => 70*i
+    }).add({
+      targets: '.ml3',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+
+    var textWrapper = document.querySelector('.ml4');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml4 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: (el, i) => 70*i
+      }).add({
+        targets: '.ml4',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>
+
+
+  <script>
+  var preloader=document.getElementById('preload');
+  function myFunction(){ preloader.style.display='none';
+   }
+  </script>
+
+
+</body>
+</html>

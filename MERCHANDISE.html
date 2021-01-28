@@ -1,0 +1,975 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1400px, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<!--LINK FPR MERCHANDISE IMAGE SLIDER-->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+<!--LINK FOR NAVBAR --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Anakhronos.com</title>
+</head>
+<style>
+/* SCROLL TO UP*/
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+/*END FOR SCROLL TO UP*/
+
+
+
+
+
+
+
+
+/* CSS FOR PAGE HEADING */
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color:white;
+  text-align: center;
+
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.container {
+position: relative;
+padding-top: 120px;
+color: white;
+}
+.text{
+  color:white;
+  font-size: 19px;
+}
+
+
+/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+.slick-slide img {
+    width: 100%;
+}
+.slick-slide:hover img {
+  transform: scale(1.5);
+}
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+    height: 300px;
+    width:320px;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.video{
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 20%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    border-radius: 20%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+    border-radius: 20%
+}
+
+.fa-instagram {
+  background: #d6249f;
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border-radius: 20%
+}
+
+.bottom{
+  background:;
+  height: 120px;
+  color: white;
+  padding-top: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.bg {
+  animation:slide 6s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg,  #0071c5 50%, #56DDD2 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:6s;
+}
+
+.bg3 {
+  animation-duration:7s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+.newmerch{
+  color: white;
+  text-align: center;
+  font-size: 29px;
+  padding-top: 100px;
+    color:#044284;
+    font-weight: bolder;
+
+}
+
+
+
+
+
+
+
+/*CSS FOR NAVBAR*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #960018;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+#preload{
+   position: fixed;
+  width:100%;
+  height:100vh;
+  background: #fff url('My Video.gif') no-repeat center;
+ z-index: 99999999;
+
+
+}
+ .design
+{
+  float:right;
+  margin-top: -50px;
+  padding-right: 10px;
+  color:white;
+}
+
+.copyright
+{
+  color:#044284;
+  padding-left: 10px;
+  float:left;
+  margin-top: -30px;
+}
+.bottom{
+  color:#044284
+}
+
+
+
+
+/*NEW HOVER REGISTER BUTTON*/
+.draw-border {
+  box-shadow: inset 0 0 0 4px #fff;
+  color: #044284;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.bod2 {
+  background:black;
+  width:100%;
+ position:relative;
+ left:500px
+}
+.origin
+{
+  text-align: center;
+}
+/*ENDING FOR REGISTER BUTTON*/
+.newmerchdesign img{
+  width:60%;
+
+}
+.newmerchdesign{
+  text-align: center;
+}
+.newmerchtext{
+  text-align: justify;
+  font-size: 23px;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  border:solid 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+/*CSS FOR COOL SUBMIT DESIGN BUTTON*/
+
+
+
+.newbtn {
+  display: -webkit-box;
+  display: flex;
+
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+	margin-top: -5px;
+	padding-bottom: 20px;
+
+}
+.newbtn a {
+  width: 100%;
+  max-width: 300px;
+  height: 54px;
+  padding: 8px;
+  font-size:20px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
+  position: relative;
+  margin: 10px 0;
+
+}
+.newbtn a.white:hover > p {
+  color: #ece8e1;
+}
+.newbtn a.white > p {
+  background: #ece8e1;
+  color: #0f1923;
+}
+.newbtn a.white > p span.base {
+  border: 1px solid transparent;
+}
+.newbtn a.transparent:hover > p {
+  color: #ece8e1;
+}
+.newbtn a.transparent:hover > p span.text {
+  box-shadow: 0 0 0 1px #ece8e1;
+}
+.newbtn a.transparent > p {
+  background: #0f1923;
+  color: #ece8e1;
+}
+
+.newbtn a.transparent > p span.base {
+  border: 1px solid #ece8e1;
+}
+.newbtn a:after, .newbtn a:before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 8px;
+  background: #0f1923;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.newbtn a:before {
+  right: 0;
+  left: initial;
+}
+.newbtn a p {
+  margin: 0;
+  height: 54px;
+  line-height: 54px;
+  box-sizing: border-box;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.newbtn a p span.base {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border: 3px solid white;  /*COLOR OF THE BORDER FOR EXPLORE BUTTON*/
+}
+.newbtn a p span.base:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  left: -1px;
+  top: -1px;
+  background: #0f1923;
+  position: absolute;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+.newbtn a p span.bg10 {
+  left: -5%;
+  position: absolute;
+  background:#044284;  /*CHANGE THIS COLOR IF YOU NEED TO CHANGE THE FILLING COLOR OF EXPLORE BUTTON */
+  width: 0;
+  height: 100%;
+  z-index: 3;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+}
+
+.newbtn a p span.text {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.newbtn a p span.text:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  background: #0f1923;
+  position: absolute;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+  z-index: 5;
+}
+.newbtn a:hover {
+  color: #ece8e1;
+}
+.newbtn a:hover span.bg10 {
+  width: 110%;
+}
+
+
+
+
+
+
+
+</style>
+
+<body onload="myFunction()">
+   <a id="button"></a>
+  <div id="preload">
+
+  </div>
+
+
+
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+
+
+                    <!--HTML FOR NAVBAR-->
+                    <div class="navbar">
+                        <a href="ABT US.html">ABOUT US</a>
+                    <!--  <a href="ANAKHRONOS MAIN PAGE.html">HOME</a> --->
+                        <a href="MANAGEMENT.html">MANAGEMENT DESK</a>
+                      <div class="dropdown">
+                        <button class="dropbtn">EVENTS
+
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="FRESHERS.html">FRESHERS'</a>
+                          <a href="ANAKHRONOS MAIN PAGE.html">ANAKHRONOS</a>
+                                <a href="UPCOMING EVENTS.html">UPCOMING EVENTS</a>
+
+                        </div>
+                      </div>
+                    <!--  <div class="dropdown">
+                        <button class="dropbtn">ARTISTS
+
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">SINGERS</a>
+                          <a href="#">BANDS</a>
+
+                        </div>
+                      </div> -->
+                        <a href="PAST LINE UP.html">ARTISTS</a>
+                        <!--<a href="e-brochure.pdf">BROCHURE</a>-->
+                        <div class="dropdown">
+                          <button class="dropbtn">BROCHURE
+
+                          </button>
+                          <div class="dropdown-content">
+                            <a href="e-brochure.pdf">2K20</a>
+                            <a href="ANAKHRONOS'19_BROCHURE.pdf">2K19</a>
+                            <a href="Brochure2018.pdf">2K18</a>
+                            <a href="ANAKHRONOS broc.pdf">2K17</a>
+
+
+                          </div>
+                        </div>
+                          <a href="sponsors.html">SPONSORS</a>
+                            <a href="MERCHANDISE.html">MERCHANDISE</a>
+                              <a href="GALLERY.html">GALLERY</a>
+                                <a href="ENROLLMENT.html">ENROLLMENT</a>
+                                    <a href="ALUMNI.html">ALUMNI</a>
+                                <a href="CONTACT US 1.html">CONTACT US</a>
+
+
+                    </div>
+
+
+
+
+
+  <h1 class="ml5">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters letters-left">MERCHANDISE</span>
+
+      <span class="line line2"></span>
+    </span>
+  </h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+  <!--Replace the images with the client logos of your customers-->
+  <div class="container">
+     <section class="customer-logos slider">
+        <div class="slide"><img src="MERCHANDISE1.jpeg"></div>
+        <div class="slide"><img src="MERCHANDISE2.jpg"></div>
+        <div class="slide"><img src="MERCHANDISE3.jpg"></div>
+        <div class="slide"><img src="MERCHANDISE4.jpg"></div>
+        <div class="slide"><img src="MERCHANDISE5.jpg"></div>
+        <div class="slide"><img src="MERCHANDISE6.jpg"></div>
+
+
+
+     </section>
+  </div>
+  <p class="newmerch">
+    ANAKHRONOS 2018 MERCHANDISE TRAILER
+  </p>
+  <div class="video">
+  <!--<video width="600" height="300" controls>
+    <source src="https://youtu.be/dyeah2rCH-g.mp4" type="video/mp4">
+    <source src="https://youtu.be/dyeah2rCH-g.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>--->
+  <iframe width="700" height="400"
+src="MERCHANDISEVIDEO1.mp4">
+</iframe>
+</div>
+
+<br>
+
+
+<p class="newmerch">
+  ANAKHRONOS 2019 MERCHANDISE TRAILER
+</p>
+<div class="video">
+<!--<video width="600" height="300" controls>
+  <source src="https://youtu.be/dyeah2rCH-g.mp4" type="video/mp4">
+  <source src="https://youtu.be/dyeah2rCH-g.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>--->
+<iframe width="700" height="400"
+src="MERCHANDISEVIDEO2.mp4">
+</iframe>
+</div>
+
+<p class="newmerch">
+EXCITED ABOUT ANAKHRONOS 2021 MERCHANDISE?
+</p>
+<div class="newmerchdesign">
+  <img src="MERCHDESIGN.jpg">
+</div>
+<br>
+<div class="newmerchtext">
+Be the designer of the official Anakhronos 2021 Merchandise and get a chance to be featured on the official Facebook Page and Website of Anakhronos! Earn fame, and be the face of your college with your creative and eccentric designs. We are accepting limited entries, Hurry up! Grab the opportunity and make it your own!
+</div>
+<br>
+<!--
+<div class="origin">
+ <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlTac9CBBQlDoxAP3OgjzELN8OLX_FV5ZtCZNq3bvf-LM1Vw/viewform">
+<button class="btn draw-border">SUBMIT YOUR DESIGN</button>
+</a>
+</div>-->
+
+    <div class="newbtn">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlTac9CBBQlDoxAP3OgjzELN8OLX_FV5ZtCZNq3bvf-LM1Vw/viewform">
+        <p><span class="bg10"></span><span class="base"></span><span class="text">SUBMIT YOUR DESIGN</span></p></a>
+    <!--		<a class="white" href="#">
+        <p><span class="bg"></span><span class="base"></span><span class="text">EXPLORE</span></p></a>
+        <a class="transparent" href="#">
+        <p><span class="bg"></span><span class="base"></span><span class="text">EXPLORE</span></p></a>  --->
+    </div>
+
+
+<div class="bottom">
+<b>FOLLOW US ON</b><br>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+ </br>
+<div class="design">
+      DESIGNED BY <br> ABIR | SOURAJIT | TUNIR | ABHIROOP
+
+   </div>
+   <div class="copyright">
+    ANAKHRONOS Copyright&copy 2020
+  </div>
+   </div>
+ </div>
+
+
+
+</div>
+
+<script>
+   var btn = $("#button");
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass("show");
+  } else {
+    btn.removeClass("show");
+  }
+});
+
+btn.on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "300");
+});
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+<script>
+var preloader=document.getElementById('preload');
+function myFunction(){ preloader.style.display='none';
+ }
+</script>
+
+</body>
+</html>

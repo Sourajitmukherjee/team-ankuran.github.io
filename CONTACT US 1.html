@@ -1,0 +1,900 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1400px, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<title>Anakhronos.com</title>
+</head>
+<style>
+
+
+
+
+/*CSS FOR NAVBAR*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #960018;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color: white;
+  text-align: center;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform-origin: 0.5 0;
+}
+/*
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}*/
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg {
+  animation:slide 7s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg,  #0071c5 50%, #56DDD2 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:6s;
+}
+
+.bg3 {
+  animation-duration:7s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width:5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 20%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    border-radius: 20%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+    border-radius: 20%
+}
+
+.fa-instagram {
+  background: #d6249f;
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border-radius: 20%
+}
+
+.bottom{
+  background:;
+  height: 120px;
+  color: white;
+  padding-top: 70px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
+@import 'https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i';
+body {
+  font-family: 'Roboto Slab', serif;
+}
+ul.nav > li > a,
+a,
+.dunkel .logoimg,
+.hell .logoimg,
+.logoimg,
+.hell,
+.dunkel,
+.navbar,
+.magazine-infolink-box:hover,
+.magazine-infolink-box,
+.teamitem .img-team,
+.teamitem .teamitem-inner,
+.teaser:hover img,
+.teaser,
+.teaser img,
+.photo,
+.mediadata-overlay,
+.magazine-mediadata:hover .mediadata-overlay,
+.magazine-mediadata:hover .overlay-icon,
+.round-badge,
+.navbar-nav
+{
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+/*teamsection*******************/
+.teamitem {
+margin:7.5em auto 2em auto;
+position:relative;
+
+width: 500px;
+padding-top: 20px;
+
+
+}
+.teamitem-inner {
+	padding:15px;
+	border: 1px solid #ccc;
+  /*background: #000000;*/
+  height:300px;
+}
+.teamitem:hover .teamitem-inner {
+	background:#eee;
+		-moz-box-shadow: 0px 0px 8px #000;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	box-shadow: 0px 0px 8px #000;
+	border:1px solid #FFF
+}
+.img-team-outer {
+	display:block;
+	height:15em;
+}
+.img-team {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	height:55%;
+	width:auto;
+	margin:0 auto;
+	position:relative;
+	padding:5px;
+	border:1px solid #004595;
+	margin-top:-7.5em;
+	background:#FFF;
+}
+.teamitem:hover .img-team {
+	-moz-box-shadow: 0px 0px 8px #000;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	box-shadow: 0px 0px 8px #000;
+	height:100%;
+	width:auto;
+}
+
+.team-name {
+	/*background:rgba(0,69,149,0.9);*/
+	color:#004595;
+
+	text-align:center;
+	font-family: 'Cormorant', serif;
+	font-size:1.5em;
+  font-weight:600;
+   padding-bottom: 50px;
+   margin-bottom: -100px;
+   margin-top: -100px;
+
+}
+/*
+.team-name:after {
+	display:block;
+	content:"";
+	width:30%;
+	height:1px;
+	background-color:#004595;
+	margin:10px auto;
+
+}
+*/
+/*
+.teamname-title {
+	font-family: 'Cormorant', serif;
+	text-align:center;
+	margin:-1.2em 20px 0 0;
+	padding:0 0 0 10px;
+font-size:1em;
+  font-weight:800;
+  margin-bottom: -150px;
+}
+.teamname-title:after {
+	display:block;
+	content:"";
+	width:10%;
+	height:1px;
+	background-color:#004595;
+	margin:10px auto;
+
+} */
+.team-magazinelogo {
+	width:20%;
+	height:auto;
+	margin:-5em 0 0 2em;
+	display:block;
+	position:relative;
+	background:#FFF;
+	padding:10px;
+	-moz-box-shadow: 0px 0px 8px #000;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	box-shadow: 0px 0px 8px #000;
+}
+.team-wichmagazine {
+	margin:1em 0 0 10px;
+	font-family: 'Cormorant', serif;
+  font-weight:800;
+	color:#004595;
+	text-align:center;
+  padding-top: 30px;
+}
+.teamitem hr {
+	margin:1em -15px;
+	border-color:#CCC
+}
+.team-contactdata {
+	text-align:left;
+	line-height:1.4em;
+	margin:1em 0 0 10px;
+	font-size:0.9em
+}
+
+@media screen  (width: 1440px) {
+.team-item{
+  padding-left: 850px;
+  margin-right: 300px;
+  padding-right: 900px;
+  margin-left: 500px;
+}
+
+}
+.underline
+{
+  text-decoration: underline;
+}
+#box {
+
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-left: 300px;
+    margin-right: 350px;
+    margin-top: 60px;
+padding-left:100px;
+
+
+
+  display: -webkit-box;
+  display: flex;
+
+  width: 670px;
+  height: 450px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+ background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+          animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@-webkit-keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+.info{
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding-top: 30px;
+  border: 5px solid;
+  padding-bottom: 30px;
+  margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 60px;
+}
+#preload{
+   position: fixed;
+  width:100%;
+  height:100vh;
+  background: #fff url('My Video.gif') no-repeat center;
+ z-index: 99999999;
+
+
+}
+
+
+.containerinfo{
+  border: solid 4px;
+  color:white;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 380px;
+  font-size: 30px;
+}
+.design
+{
+  float:right;
+  margin-top: -50px;
+}
+
+.copyright
+{
+  float:left;
+  margin-top: -30px;
+}
+/*CODES FOR NEON*/
+
+
+.neon {
+  text-align:center;
+  font-family: neon;
+  font-family:Futura,"Trebuchet MS",Arial,sans-serif;
+  color: #FB4264;
+  font-size: 40px;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #F40A35;
+
+
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
+}
+.design
+{
+  float:right;
+  margin-top: -50px;
+  color:white;
+  padding-right: 10px;
+}
+
+.copyright
+{
+  float:left;
+  margin-top: -30px;
+  padding-left: 10px;
+  color:#044284
+}
+.bottom{
+  color:#044284;
+
+}
+
+
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #0047ab, 0 0 3vw #0047ab, 0 0 10vw #0047ab, 0 0 10vw #0047ab, 0 0 .4vw #0047ab, .5vw .5vw .1vw #0047ab;
+    color: #ABCBFE ;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #0047ab, 0 0 1.5vw #0047ab, 0 0 5vw#0047ab, 0 0 5vw#0047ab, 0 0 .2vw #0047ab, .5vw .5vw .1vw #0047ab;
+    color: #fff;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #0047ab, 0 0 3vw #0047ab, 0 0 10vw #0047ab, 0 0 10vw#0047ab, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+/*NEON CODES ENDING HERE DESIGNING*/
+
+</style>
+<body onload="myFunction()">
+  <div id="preload">
+
+  </div>
+
+
+
+                <!--HTML FOR NAVBAR-->
+                <div class="navbar">
+                    <a href="ABT US.html">ABOUT US</a>
+                <!--  <a href="ANAKHRONOS MAIN PAGE.html">HOME</a> --->
+                    <a href="MANAGEMENT.html">MANAGEMENT DESK</a>
+                  <div class="dropdown">
+                    <button class="dropbtn">EVENTS
+
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="FRESHERS.html">FRESHERS'</a>
+                      <a href="ANAKHRONOS MAIN PAGE.html">ANAKHRONOS</a>
+                            <a href="UPCOMING EVENTS.html">UPCOMING EVENTS</a>
+
+                    </div>
+                  </div>
+                <!--  <div class="dropdown">
+                    <button class="dropbtn">ARTISTS
+
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">SINGERS</a>
+                      <a href="#">BANDS</a>
+
+                    </div>
+                  </div> -->
+                    <a href="PAST LINE UP.html">ARTISTS</a>
+                    <!--<a href="e-brochure.pdf">BROCHURE</a>-->
+                    <div class="dropdown">
+                      <button class="dropbtn">BROCHURE
+
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="e-brochure.pdf">2K20</a>
+                        <a href="ANAKHRONOS'19_BROCHURE.pdf">2K19</a>
+                        <a href="Brochure2018.pdf">2K18</a>
+                        <a href="ANAKHRONOS broc.pdf">2K17</a>
+
+
+                      </div>
+                    </div>
+                      <a href="sponsors.html">SPONSORS</a>
+                        <a href="MERCHANDISE.html">MERCHANDISE</a>
+                          <a href="GALLERY.html">GALLERY</a>
+                            <a href="ENROLLMENT.html">ENROLLMENT</a>
+                                <a href="ALUMNI.html">ALUMNI</a>
+                            <a href="CONTACT US 1.html">CONTACT US</a>
+
+
+                </div>
+
+
+
+
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+
+
+<h1 class="ml5">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters letters-left">CONTACT</span>
+  <!--  <span class="letters ampersand">&amp;</span> -->
+    <span class="letters letters-right">US</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+
+
+
+<!--JAVASCRIPT FOR PAGE HEADING--->
+<script>
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+<!--
+<div class="info">
+FOR PARTNERSHIP
+ <br>
+ CONTACT<br>
+<b> tmsl.team.anukran@gmail.com
+
+
+</div>
+
+
+-->
+<br>
+<br>
+<br>
+
+<div class="containerinfo">
+  <h1 class="neon">TEAM ANKURAN</h1>
+   Techno Main Salt Lake</br>
+
+   EM-4/1, Sector V, Salt Lake,</br>
+   Kolkata 700091,West Bengal.</br>
+  <br>Phone No: 033-23575683/84/86
+  <br> Email: tmsl.team.ankuran@gmail.com</br>
+
+</div>
+
+
+
+
+
+
+
+
+<!--
+<div class="gradient-border" id="box">
+
+  TEAM ANKURAN
+   <br>TMSL</br>
+
+  Address:TECHNO INDIA : EM-4/1, Sector V, Bidhannagar, Kolkata, West Bengal 700091</br>
+  <br>Phone No: 033-23575683/84/86
+  <br> tmsl.team.ankuran@gmail.com</br>
+</div>   --->
+<!--
+
+
+<div class="container gek-content-padd">
+	<div class="row gek-content">
+
+<div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine"> Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine"> Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+    <div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+    <div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+    <div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+
+
+
+<div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+
+
+
+
+
+
+    <div class="col-md-4 col-xs-6 teamitem">
+<div class="teamitem-inner">
+<div class="img-team-outer"><img src="https://www.w3schools.com/howto/img_avatar.png" class="img-responsive img-team" height="600" width="600" /></div>
+<p class="team-name">Maxi Mustermann</p>
+
+<p class="team-wichmagazine">Manager</p>
+<hr />
+<p class="team-contactdata"><i class="icon-phone"></i> 0 28 51 / 18 00 - 21<br /> <i class="icon-print"></i> 0 28 31 / 13 00 - 20<br /> <i class="icon-mail"></i>you@yourmail.com</p>
+</div>
+</div>
+</div>
+
+--->
+
+
+
+
+<div class="bottom">
+<b>FOLLOW US ON</b><br>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+   </br>
+    <div class="design">
+      DESIGNED BY <br> ABIR | SOURAJIT | TUNIR | ABHIROOP
+
+   </div>
+   <div class="copyright">
+    ANAKHRONOS Copyright&copy 2020
+  </div>
+</div>
+
+
+<script>
+var preloader=document.getElementById('preload');
+function myFunction(){ preloader.style.display='none';
+ }
+</script>
+
+
+
+
+</body>
+</html>
